@@ -18,6 +18,7 @@ variables:
   mysql-user: 'root'
 
 steps:
+
 - task: NuGetToolInstaller@0
 
 - task: PowerShell@1
@@ -41,7 +42,7 @@ steps:
 - task: PowerShell@4
   inputs:
     targetType: 'filePath' # Optional. Options: filePath, inline
-    filePath: .\build\dotnet-install.ps1 # Required when targetType == FilePath
+    filePath: '.\build\dotnet-install.ps1' # Required when targetType == FilePath
     arguments: '-Version 2.1.300' # Optional
 
 # - task: NuGetCommand@2
