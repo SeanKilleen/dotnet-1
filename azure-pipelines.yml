@@ -24,7 +24,7 @@ steps:
   inputs: 
     targetType: 'inline'
     script: 'nuget install redis-64 -excludeversion'
-    displayName: 'redis nuget'
+  displayName: 'redis nuget'
 
 # - task: PowerShell@2
 #   inputs: 
