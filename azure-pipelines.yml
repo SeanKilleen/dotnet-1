@@ -38,9 +38,3 @@ steps:
     targetType: 'inline'
     script: 'createdb $(all-dbs-name)' # inline script
     displayName: 'create postgres db' #
-
-- task: PowerShell@4
-  inputs:
-    targetType: 'filePath' # Optional. Options: filePath, inline
-    filePath: '.\build\dotnet-install.ps1' # Required when targetType == FilePath
-    arguments: '-Version 2.1.300' # Optional
