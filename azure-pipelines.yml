@@ -44,18 +44,3 @@ steps:
     targetType: 'filePath' # Optional. Options: filePath, inline
     filePath: '.\build\dotnet-install.ps1' # Required when targetType == FilePath
     arguments: '-Version 2.1.300' # Optional
-
-# - task: NuGetCommand@2
-#   inputs:
-#     restoreSolution: '$(solution)'
-
-# - task: VSBuild@1
-#   inputs:
-#     solution: '$(solution)'
-#     platform: '$(buildPlatform)'
-#     configuration: '$(buildConfiguration)'
-
-# - task: VSTest@2
-#   inputs:
-#     platform: '$(buildPlatform)'
-#     configuration: '$(buildConfiguration)'
