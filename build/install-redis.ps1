@@ -1,0 +1,1 @@
+nuget install redis-64 -excludeversion

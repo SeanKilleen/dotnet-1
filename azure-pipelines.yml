@@ -22,8 +22,8 @@ steps:
 
 - task: PowerShell@1
   inputs: 
-    targetType: 'inline'
-    script: 'nuget install redis-64 -excludeversion'
+    targetType: 'filePath'
+    filePath: '.\build\install-redis.ps1'
   displayName: 'redis nuget'
 
 # - task: PowerShell@2
