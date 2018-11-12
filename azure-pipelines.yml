@@ -18,9 +18,9 @@ variables:
   mysql-user: 'root'
 
 steps:
-- task: NuGetToolInstaller@0
+- task: NuGetToolInstaller
 
-- task: PowerShell@1
+- task: PowerShell
   inputs: 
     targetType: 'filePath'
     filePath: '.\build\install-redis.ps1'
