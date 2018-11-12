@@ -26,11 +26,11 @@ steps:
     script: 'nuget install redis-64 -excludeversion'
   displayName: 'redis nuget'
 
-# - task: PowerShell@2
-#   inputs: 
-#     targetType: 'inline'
-#     script: 'redis-64\tools\redis-server.exe --service-install; redis-64\tools\redis-server.exe --service-start'
-#     displayName: 'redis install and run'
+- task: PowerShell@2
+  inputs: 
+    targetType: 'inline'
+    script: 'redis-64\tools\redis-server.exe --service-install; redis-64\tools\redis-server.exe --service-start'
+    displayName: 'redis install and run'
 
 # - task: PowerShell@3 
 #   inputs: 
