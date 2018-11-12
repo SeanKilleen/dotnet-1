@@ -32,6 +32,20 @@ steps:
     script: 'redis-64\tools\redis-server.exe --service-install; redis-64\tools\redis-server.exe --service-start'
     displayName: 'redis install and run'
 
+- task: DockerCompose@0
+  inputs:
+    dockerComposeFile: '.\build\docker-compose.yml' 
+    action: 'Run A Specific Service' # Options: build Services, push Services, run Services, run A Specific Service, lock Services, write Service Image Digests, combine Configuration, run A Docker Compose Command
+    serviceName: 'postgres' # Required when action == Run A Specific Service
+  displayName: 'run postgres container'
+
+- task: DockerCompose@0
+  inputs:
+    dockerComposeFile: '.\build\docker-compose.yml' 
+    action: 'Run A Specific Service' # Options: build Services, push Services, run Services, run A Specific Service, lock Services, write Service Image Digests, combine Configuration, run A Docker Compose Command
+    serviceName: 'mysql' # Required when action == Run A Specific Service
+  displayName: 'run mysql container'
+
 # - task: PowerShell@3 
 #   inputs: 
 #     targetType: 'inline'
