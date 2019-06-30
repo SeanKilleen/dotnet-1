@@ -2,6 +2,7 @@ resources:
   containers:
   - container: redis
     image: redis
+    platform: linux
     ports:
     - 6379:6379
   - container: mongo
