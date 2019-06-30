@@ -21,6 +21,7 @@ $projectsToBuild =
     'MiniProfiler.AspNetCore.Mvc',
     'MiniProfiler.Providers.MongoDB',
     'MiniProfiler.Providers.MySql',
+    'MiniProfiler.Providers.PostgreSql',
     'MiniProfiler.Providers.Redis',
     'MiniProfiler.Providers.Sqlite',
     'MiniProfiler.Providers.SqlServer',
@@ -45,7 +46,7 @@ if ($RunTests) {
         Write-Host "Running tests: $project (all frameworks)" -ForegroundColor "Magenta"
         Push-Location ".\tests\$project"
 
-        dotnet xunit -configuration Release --no-build
+        dotnet test -c Release --no-build
         if ($LastExitCode -ne 0) {
             Write-Host "Error with tests, aborting build." -Foreground "Red"
             Pop-Location

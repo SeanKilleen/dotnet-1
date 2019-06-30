@@ -1,0 +1,2 @@
+# Build Variables at https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=vsts#build-variables
+.\build.ps1 -CreatePackages $true -PullRequestNumber $env:SYSTEM_PULLREQUEST_PULLREQUESTNUMBER
